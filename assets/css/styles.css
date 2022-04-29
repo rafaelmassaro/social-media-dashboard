@@ -87,7 +87,7 @@ body{
 }
 
 .dashboard-text{
-    margin-top: 1.2rem;
+    margin-top: .2rem;
     color: var(--text2);
     font-size: 1.1rem;
     font-weight: 700;
@@ -315,4 +315,51 @@ body{
 
 .percent.negative{
     color: var(--bright-red);
+}
+
+@media(min-width: 500px){
+    .dashboard-header{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .divisor{
+        display: none;
+    }
+
+    .toggle{
+        margin-left: 1.5rem;
+    }
+
+    .sm-cards, .overview-cards{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 55px;
+    }
+
+    .card, .details{
+        width: 255px;
+    }
+}
+
+@media (min-width: 700px){
+    .dashborard-title{
+        font-size: 2.4rem;
+    }
+
+    .dashboard-text{
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 930px){
+    .sm-cards, .overview-cards{
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 250px);
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
 }
